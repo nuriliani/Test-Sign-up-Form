@@ -1,0 +1,15 @@
+body {
+      margin-right: auto;
+      background-color: #fff;
+	  width: 994px;
+      padding-left: 170px;
+      padding-right: 10px;
+}
+
+p, label { 
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 18px; 
+	margin: 4px 0;
+}
+
