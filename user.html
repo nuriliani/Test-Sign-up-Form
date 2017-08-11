@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+   <title>Registration Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
+
+
+</head>
+<body>
+<div class="container">
+		<div class="col-sm-offset-11 col-sm-1">
+			<button type="submit" class="btn btn-primary" onclick="logOut()">Log Out</button>
+		</div>
+  
+  <h3>Your Registration is Successful !</h3>
+  <br>
+	 <div class="content">
+	  	<form class="form-horizontal">
+						
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="fName">First Name: </label>
+								<div class="col-sm-10" >
+									<div class="input-group">
+										<p id="firstname"></p>
+									</div>
+								</div>
+						</div>
+								
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="lName">Last Name:</label>
+								<div class="col-sm-10" >
+									<div class="input-group">
+										<p  id="lastname"></p>
+									</div>
+								</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="userEmail">Email:</label>
+								<div class="col-sm-10 ">
+									<div class="input-group">
+										<p id="email"></p>
+									</div>	   
+							   </div>
+								    
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="gender">Gender:</label>
+								<div class="col-sm-10">
+									<div class="input-group">
+										<p id="gender"></p>
+									</div>
+								</div>	
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="doB">Date of birth:</label>
+								<div class="col-sm-10">
+									<div class="input-group">
+										<p id="dob"></p>
+									</div>		
+								</div>	
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="nationality">Nationality:</label>
+								<div class="col-sm-10 inputGroupContainer"> 
+									<div class="input-group" >
+										<p id="nationality"></p>
+									</div>
+								</div>
+						</div>
+			</form>  	
+	 </div>
+</div>
+</body>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+<script type="text/javascript">
+
+// Retrieve the object from storage
+	var retrievedObject = localStorage.getItem('testObject');
+
+	var data = JSON.parse(retrievedObject);
+	document.getElementById('firstname').innerHTML += data['firstname'];
+	document.getElementById('lastname').innerHTML += data['lastname'];
+	document.getElementById('email').innerHTML += data['email'];
+	document.getElementById('gender').innerHTML += data['gender'];
+	document.getElementById('dob').innerHTML+=data['dob'];
+	document.getElementById('nationality').innerHTML += data['nationality'];
+
+	console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
+	function logOut(){
+		var r = confirm("Do you really want to log out?");
+		    if (r) 
+				window.location.href='https://www.google.com/'
+			}
+	
+
+</script>
+<script type="text/javascript">
+	
+</script>
+</html>
